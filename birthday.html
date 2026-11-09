@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مفاجأة ليكي يا سهيلة</title>
+<meta name="description" content="في حاجة صغيرة اتعملت مخصوص عشانك… افتحي الرابط وشوفي">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="مفاجأة ليكي يا سهيلة">
+<meta property="og:description" content="في حاجة صغيرة اتعملت مخصوص عشانك… افتحي الرابط وشوفي">
+<meta property="og:url" content="https://ma7470089-hue.github.io/happy-birthday/">
+<meta property="og:image" content="https://ma7470089-hue.github.io/happy-birthday/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;500;700&family=Great+Vibes&display=swap">
+<style>
+:root{
+  color-scheme:light;--bg:#fff;--paper:#fff;--ink:#c2365a;--rose:#e0507a;--card:#fff;--back:#fde3ea;--on-back:#c2365a;--muted:#e58aa6;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal","Segoe UI",Tahoma,sans-serif;line-height:1.9;overflow-x:hidden}
+.display{font-family:"Aref Ruqaa","Amiri","Traditional Arabic",serif}
+
+/* Stage 1: sealed surprise */
+#intro{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1.5rem;
+  background:radial-gradient(60rem 40rem at 50% 35%,#fff3f6 0%,#fff 70%);color:#c2365a;position:relative;overflow:hidden;transition:opacity .9s ease}
+#intro.gone{opacity:0;pointer-events:none}
+#intro h1{font-size:clamp(3rem,13vw,5.4rem);margin:0 0 .6rem;font-weight:400;line-height:1.2}
+#intro p{margin:0 0 1.6rem;color:#e0507a;font-size:1.1rem}
+#openBtn{font:inherit;font-weight:700;font-size:1.15rem;color:#fff;background:#e0507a;border:0;border-radius:999px;padding:.9rem 2.4rem;cursor:pointer;box-shadow:0 0 0 0 rgba(224,80,122,.45);animation:pulse 2.4s infinite}
+#openBtn:hover{background:#e8668c}
+#openBtn:focus-visible,.rc:focus-visible{outline:3px solid #e0507a;outline-offset:4px}
+@keyframes pulse{70%{box-shadow:0 0 0 22px rgba(224,80,122,0)}100%{box-shadow:0 0 0 0 rgba(224,80,122,0)}}
+#count{font-family:"Aref Ruqaa",serif;font-size:7rem;line-height:1;min-height:7rem;color:#e0507a}
+#count.pop{animation:pop .9s ease both}
+@keyframes pop{0%{transform:scale(.4);opacity:0}30%{transform:scale(1.1);opacity:1}100%{transform:scale(1);opacity:.85}}
+
+.date{display:flex;gap:.7rem;justify-content:center;margin-bottom:1.4rem}
+.date input{font:inherit;font-size:1.4rem;width:4.4rem;text-align:center;color:#c2365a;background:#fff;border:2px solid #f6c1d0;border-radius:14px;padding:.6rem .3rem}
+.date input:focus{outline:none;border-color:#e0507a}
+.date #yy{width:6rem}
+.date input::placeholder{color:#f0a9bd}
+#pre #err{min-height:1.8em;margin:1rem 0 0;font-size:1rem;color:#c2365a}
+.shake{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.cake-area{position:relative;height:19rem;border:2px dashed #f6c1d0;border-radius:24px;overflow:hidden}
+.cake{position:absolute;width:7rem;height:7rem;padding:0;border:0;background:none;cursor:pointer;left:calc(50% - 3.5rem);top:calc(50% - 3.5rem);transition:left .45s cubic-bezier(.5,1.6,.5,1),top .45s cubic-bezier(.5,1.6,.5,1)}
+.cake svg{width:100%;height:100%;display:block}
+.cake:focus-visible{outline:3px solid var(--rose);outline-offset:4px;border-radius:16px}
+.bubble{position:absolute;top:1rem;left:50%;width:min(88%,20rem);background:var(--rose);color:#fff;border-radius:20px;padding:.9rem 1.1rem;text-align:center;font-size:1.6rem;line-height:1.6;transform:translateX(-50%);animation:pop2 .6s ease both}
+.bubble[hidden]{display:none}
+@keyframes pop2{0%{opacity:0;transform:translateX(-50%) scale(.6)}100%{opacity:1;transform:translateX(-50%) scale(1)}}
+.wish{font:inherit;background:var(--rose);color:#fff;border:0;border-radius:999px;padding:.7rem 1.8rem;font-weight:700;cursor:pointer}
+.wish:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wishmsg{font-size:1.8rem;color:var(--rose);margin:.6rem 0 0}
+.grid .rc.tall{aspect-ratio:1/1.3}
+.grid .rc.tall .back{font-size:.95rem}
+.sky{position:relative;height:18rem;border-radius:24px;overflow:hidden;background:radial-gradient(120% 100% at 50% 0%,#5a2060 0%,#2a1233 60%,#190a22 100%)}
+.sky i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.7;animation:tw2 3s ease-in-out infinite}
+@keyframes tw2{50%{opacity:.15}}
+.star{position:absolute;width:2.8rem;height:2.8rem;padding:0;border:0;background:none;cursor:pointer;transform:translate(-50%,-50%);animation:tw 3s ease-in-out infinite}
+.star.s{width:2.4rem;height:2.4rem}
+.star.big{width:4.6rem;height:4.6rem}
+.star svg{width:100%;height:100%;display:block;fill:#ffe9a8;filter:drop-shadow(0 0 6px rgba(255,233,168,.8))}
+.star.big svg{fill:#ffb7c8;filter:drop-shadow(0 0 14px rgba(255,160,190,.95))}
+.star.on svg{fill:#fff}
+.star:focus-visible{outline:2px solid #fff;border-radius:50%}
+@keyframes tw{50%{opacity:.55;transform:translate(-50%,-50%) scale(.85)}}
+.skymsg{text-align:center;color:var(--rose);font-size:1.7rem;line-height:1.6;min-height:3.4rem;margin:1rem 0 0}
+@media (prefers-reduced-motion:reduce){.star,.sky i{animation:none}}
+.balloons{position:relative;height:16rem;border:2px dashed #f6c1d0;border-radius:24px;overflow:hidden}
+.bal{position:absolute;width:4.2rem;height:6.3rem;margin-left:-2.1rem;padding:0;border:0;background:none;cursor:pointer;animation:bob 3.2s ease-in-out infinite}
+.bal svg{width:100%;height:100%;display:block}
+.bal.pop{animation:none;transform:scale(1.7);opacity:0;transition:transform .25s,opacity .25s}
+.bal:focus-visible{outline:3px solid var(--rose);border-radius:50%}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.balmsg{text-align:center;color:var(--rose);font-size:1.9rem;line-height:1.6;min-height:3.6rem;margin:1rem 0 0}
+@media (prefers-reduced-motion:reduce){.bal{animation:none}}
+.scratch-box{position:relative;width:min(100%,22rem);height:9rem;margin:0 auto;border-radius:24px;overflow:hidden;background:var(--back);box-shadow:0 12px 26px -18px rgba(90,20,60,.5)}
+.scratch-box .reveal{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;color:var(--rose);font-size:2.2rem;line-height:1.3}
+.scratch-box .reveal svg{width:1.8rem;height:1.8rem;fill:var(--rose)}
+.scratch-box canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair;transition:opacity .6s}
+.wish:not([hidden]){box-shadow:0 0 0 0 rgba(224,80,122,.45);animation:wishpulse 1.8s infinite}
+@keyframes wishpulse{70%{box-shadow:0 0 0 14px rgba(224,80,122,0)}100%{box-shadow:0 0 0 0 rgba(224,80,122,0)}}
+@media (prefers-reduced-motion:reduce){.wish{animation:none !important}}
+.letters{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.lt{width:3.8rem;height:3.8rem;padding:0;border-radius:50%;border:2px solid #f6c1d0;background:var(--card);color:var(--rose);font-family:"Aref Ruqaa",serif;font-size:2.1rem;line-height:1;cursor:pointer;transition:background .3s,color .3s,transform .2s}
+.lt:hover{transform:translateY(-3px)}
+.lt.on{background:var(--rose);color:#fff;border-color:var(--rose)}
+.lt:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.lmsg{text-align:center;color:var(--rose);font-size:1.7rem;line-height:1.6;min-height:3.4rem;margin:1rem 0 0}
+html{scroll-behavior:smooth}
+#main{animation:mainIn 1.4s ease both}
+#pre{animation:mainIn 1.2s ease both}
+@keyframes mainIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+#intro h1{text-shadow:0 8px 24px rgba(224,80,122,.18)}
+#intro h1::after{content:"";display:block;width:4rem;height:2px;margin:.8rem auto 0;border-radius:2px;background:linear-gradient(90deg,transparent,#e0507a,transparent)}
+.date input{box-shadow:0 8px 18px -12px rgba(224,80,122,.55)}
+h2.display::after{content:"";display:block;width:3.2rem;height:2px;margin:.55rem auto 0;border-radius:2px;background:linear-gradient(90deg,transparent,var(--rose),transparent)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+#main .letter{position:relative;padding-top:2.8rem;line-height:2;box-shadow:0 24px 54px -28px rgba(90,20,60,.5)}
+#main .letter::before{content:"";position:absolute;top:-1.4rem;left:50%;width:2.8rem;height:2.8rem;margin-left:-1.4rem;background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA0MCA0MCc+PGNpcmNsZSBjeD0nMjAnIGN5PScyMCcgcj0nMTknIGZpbGw9JyNlMDUwN2EnLz48Y2lyY2xlIGN4PScyMCcgY3k9JzIwJyByPScxNScgZmlsbD0nbm9uZScgc3Ryb2tlPScjZmZmJyBzdHJva2Utb3BhY2l0eT0nLjM1JyBzdHJva2Utd2lkdGg9JzEuMicvPjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDggOCknPjxwYXRoIGQ9J00xMiAyMXMtNy41LTQuNi05LjYtOS4zQy45IDguMiAyLjggNC41IDYuNCA0LjVjMiAwIDMuNyAxLjEgNC42IDIuN2gyYy45LTEuNiAyLjYtMi43IDQuNi0yLjcgMy42IDAgNS41IDMuNyA0IDcuMkMxOS41IDE2LjQgMTIgMjEgMTIgMjF6JyBmaWxsPScjZmZmJy8+PC9nPjwvc3ZnPg==") center/contain no-repeat;filter:drop-shadow(0 5px 7px rgba(224,80,122,.35))}
+.wish,.end button{transition:transform .2s ease,background .3s}
+.wish:hover,.end button:hover{transform:translateY(-2px)}
+.foot{text-align:center;color:var(--muted);font-size:.95rem;margin:3rem 0 0}
+.sky::after{content:"";position:absolute;top:10%;right:-12%;width:5rem;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent,#fff);opacity:0;transform:rotate(-20deg);animation:shoot 7s ease-in 2s infinite}
+@keyframes shoot{0%{transform:translate(0,0) rotate(-20deg);opacity:0}2%{opacity:1}12%{transform:translate(-26rem,9rem) rotate(-20deg);opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#main,#pre{animation:none}.rv{opacity:1;transform:none;transition:none}.sky::after{animation:none}.wish:hover,.end button:hover{transform:none}}
+/* Petals */
+.petal{position:fixed;top:-30px;width:14px;height:18px;border-radius:150% 0 150% 0;background:#e8879c;opacity:.8;pointer-events:none;z-index:5;animation:fall linear forwards}
+@keyframes fall{0%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(var(--sway),55vh,0) rotate(180deg)}100%{transform:translate3d(calc(var(--sway) * -1),115vh,0) rotate(400deg)}}
+
+/* Stage 2 */
+#main{max-width:40rem;margin:0 auto;padding:3rem 1.25rem 4rem}
+#main[hidden]{display:none}
+.hello{text-align:center;font-family:"Great Vibes","Snell Roundhand","Segoe Script",cursive;font-weight:400;font-size:clamp(2.8rem,11vw,4.6rem);line-height:1.3;margin:0 0 2rem}
+.letter{background:var(--paper);border:1.5px solid #f6c1d0;border-radius:6px 28px 6px 28px;padding:2rem 1.6rem;box-shadow:0 18px 40px -22px rgba(90,20,60,.45);font-size:1.15rem;max-width:34rem;margin:0 auto}
+.letter p{margin:0 0 1.1rem}
+.sign{font-size:1.7rem;color:var(--rose);text-align:left;margin:1.4rem 0 0 !important}
+h2{text-align:center;font-size:clamp(1.7rem,5.5vw,2.3rem);margin:4rem 0 .3rem}
+.sub{text-align:center;color:var(--muted);margin:0 0 1.6rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:.9rem}
+.rc{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;perspective:700px;aspect-ratio:1/1.05}
+.rc-in{position:relative;width:100%;height:100%;transition:transform .6s ease;transform-style:preserve-3d}
+.rc[aria-pressed="true"] .rc-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;padding:.9rem;text-align:center}
+.front{background:var(--card);border:1.5px solid #f6c1d0;box-shadow:0 10px 24px -16px rgba(90,20,60,.5);color:var(--rose);font-size:.95rem}
+.front svg{width:2.4rem;height:2.4rem;fill:var(--rose)}
+.back{background:var(--back);color:var(--on-back);transform:rotateY(180deg);font-weight:500;font-size:1rem;line-height:1.6}
+.end{text-align:center;margin-top:4.5rem}
+.end .display{font-size:clamp(2.2rem,8vw,3.4rem);color:var(--rose);margin:0;line-height:1.4}
+.end button{font:inherit;margin-top:1.2rem;background:var(--rose);color:#fff;border:0;border-radius:999px;padding:.7rem 1.8rem;font-weight:700;cursor:pointer}
+.end button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.petal{display:none}#openBtn{animation:none}.rc-in{transition:none}}
+</style>
+</head>
+<body>
+
+<section id="intro">
+  <div id="count" aria-live="polite"></div>
+  <div id="pre">
+    <h1 class="hello" dir="ltr">Happy Birthday, my love</h1>
+    <p>اكتبي يوم وشهر وسنة ميلادك عشان تتفتح</p>
+    <div class="date" dir="rtl">
+      <input id="dd" inputmode="numeric" maxlength="2" placeholder="اليوم" aria-label="اليوم">
+      <input id="mm" inputmode="numeric" maxlength="2" placeholder="الشهر" aria-label="الشهر">
+      <input id="yy" inputmode="numeric" maxlength="4" placeholder="السنة" aria-label="السنة">
+    </div>
+    <button id="openBtn" type="button">دوسي هنا يا سوسو</button>
+    <p id="err" role="alert"></p>
+  </div>
+</section>
+
+<main id="main" hidden>
+  <article class="letter" id="letter"></article>
+
+  <h2 class="display">في تورتة ليكي</h2>
+  <p class="sub" id="hint">حاولي تمسكيها، اضغطي على التورتة</p>
+  <div class="cake-area" id="area" dir="ltr">
+    <div class="bubble display" id="bubble" dir="rtl" hidden></div>
+    <button class="cake" id="cake" type="button" aria-label="التورتة">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <ellipse cx="50" cy="90" rx="44" ry="7" fill="#fde3ea" stroke="#f6c1d0" stroke-width="2"/>
+        <rect x="10" y="60" width="80" height="28" rx="7" fill="#f6b9c6"/>
+        <rect x="20" y="38" width="60" height="26" rx="7" fill="#fde3ea" stroke="#f6c1d0" stroke-width="2"/>
+        <path d="M20 46c6 0 6 8 12 8s6-8 12-8 6 8 12 8 6-8 12-8 6 8 12 8" fill="none" stroke="#e0507a" stroke-width="3" stroke-linecap="round"/>
+        <rect x="48" y="22" width="4" height="16" rx="2" fill="#e0507a"/>
+        <ellipse id="flame" cx="50" cy="17" rx="4" ry="6" fill="#ffb347"/>
+        <circle cx="28" cy="72" r="4" fill="#e0507a"/><circle cx="50" cy="74" r="4" fill="#e0507a"/><circle cx="72" cy="72" r="4" fill="#e0507a"/>
+      </svg>
+    </button>
+  </div>
+
+  <div style="text-align:center;margin-top:1.2rem">
+    <button class="wish" id="wishBtn" type="button" hidden>اتمني أمنية وطفّي الشمعة</button>
+    <p class="display wishmsg" id="wishMsg" hidden>الأمنية دي هتتحقق إن شاء الله</p>
+  </div>
+
+  <h2 class="display">فرقعي البالونات</h2>
+  <p class="sub">كل بالونة فيها كلمة</p>
+  <div class="balloons" id="balloons" dir="ltr"></div>
+  <p class="display balmsg" id="balMsg" aria-live="polite"></p>
+
+  <h2 class="display">خربشي يا سوسو</h2>
+  <p class="sub">خربشي على الكارت بإصبعك</p>
+  <div class="scratch-box">
+    <div class="reveal display"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 2.8 4.5 6.4 4.5c2 0 3.7 1.1 4.6 2.7h2c.9-1.6 2.6-2.7 4.6-2.7 3.6 0 5.5 3.7 4 7.2C19.5 16.4 12 21 12 21z"/></svg><span>إنتي عمري</span></div>
+    <canvas id="scratch" aria-label="كارت للخربشة"></canvas>
+  </div>
+
+  <h2 class="display">اسمك حرف حرف</h2>
+  <p class="sub">دوسي على كل حرف</p>
+  <div class="letters" id="letters"></div>
+  <p class="display lmsg" id="lMsg" aria-live="polite"></p>
+
+  <h2 class="display">نجمة سهيلة</h2>
+  <p class="sub">دوسي على أي نجمة… وفيه نجمة مخصوصة</p>
+  <div class="sky" id="sky" dir="ltr"></div>
+  <p class="display skymsg" id="skyMsg" aria-live="polite"></p>
+
+  <div class="end">
+    <p class="display" id="endText"></p>
+    <button type="button" id="moreBtn">ألعاب نارية تاني</button>
+  </div>
+  <p class="foot">اتعمل بكل حب لسهيلة</p>
+</main>
+
+<script>
+/* ===== عدّلي الكلام من هنا ===== */
+var CONFIG = {
+  name: "سهيلة",
+  from: "قمرك",
+  letter: [
+    "سهيلة حبيبتي، مش عارف أبدأ منين… بس اللي أنا متأكد منه إن وجودك في حياتي خلّى الأيام العادية أحلى بكتير.",
+    "ضحكتك بتصلّح يومي، وصوتك بيهدّيني، بحبك يا سهيلة، وبحب كل لحظة ما بينا، ربنا يخليكي ليا.",
+    "النهارده يومك إنتي، وأنا محظوظ إني بحتفل بيكي. وإن شاء الله السنة الجاية تبقي مراتي، وكل سنة نكون سوا ومع بعض، وكل سنة وإنتي حبيبتي.",
+    "بحبك أكتر مما الكلام يقدر يقول."
+  ],
+  reasons: [
+    "ضحكتك بتنوّر أي مكان",
+    "طيبة قلبك مع كل الناس",
+    "بتسمعيني حتى لو مش بقول حاجة",
+    "معاكِ الأيام الوحشة بتعدّي أسهل",
+    "بتاخدي بالك من أصغر التفاصيل",
+    "بتخليني نسخة أحسن مني",
+    "حتى لما تزعلي بتبقي قمر",
+    "ببساطة… عشان انتِ انتِ"
+  ],
+  end: "كل سنة وإنتي حبيبتي",
+  cakeMsg: "كل سنة وإنتي طيبة يا عمري",
+  opens: [
+    ["افتحي لما تزعلي", "خدي نفس عميق… كل ده هيعدّي، وأنا جنبك. وإنتي أقوى من أي حاجة."],
+    ["افتحي لما تفتقديني", "أنا برضه بفكر فيكي دلوقتي. ابعتيلي كلمة وأنا هرد عليكي على طول."],
+    ["افتحي لما تحتاجي تضحكي", "افتكري آخر مرة ضحكنا لحد ما وجعتنا بطننا… وابعتيلي أحكيلك نكتة."],
+    ["افتحي لما تتعبي", "ارتاحي شوية… إنتي بتعملي أكتر من طاقتك. أنا فخور بيكي وجنبك."]
+  ],
+  birthday: { day: 15, month: 12, year: 2000 } /* يوم وشهر عيد ميلادها */
+};
+/* ================================ */
+
+var $ = function(id){ return document.getElementById(id); };
+var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+$("letter").innerHTML = CONFIG.letter.map(function(t){ return "<p>" + t + "</p>"; }).join("") +
+  '<p class="sign display">— ' + CONFIG.from + "</p>";
+$("endText").textContent = CONFIG.end;
+
+var area = $("area"), cake = $("cake"), hint = $("hint"), tries = 0, done = false;
+var hints = ["هربت منك! حاولي تاني", "هربت تاني! كمان مرة", "هربت منك يا سوسو"];
+function place(x, y){ cake.style.left = x + "px"; cake.style.top = y + "px"; }
+cake.addEventListener("click", function(){
+  if(done) return;
+  var aw = area.clientWidth - cake.offsetWidth, ah = area.clientHeight - cake.offsetHeight;
+  if(tries < 3){
+    hint.textContent = hints[tries]; tries++;
+    place(Math.random()*aw, Math.random()*ah);
+    return;
+  }
+  done = true;
+  place(aw/2, ah - 8);
+  var b = $("bubble"); b.textContent = CONFIG.cakeMsg; b.hidden = false;
+  hint.textContent = "التورتة عايزة تقوللك حاجة";
+  petals(60, true);
+  $("wishBtn").hidden = false;
+});
+$("wishBtn").addEventListener("click", function(){
+  var f = $("flame"); if(f) f.style.display = "none";
+  $("wishBtn").hidden = true; $("wishMsg").hidden = false;
+  fireworks();
+  petals(40, true);
+});
+
+
+var STAR_MSG = "في نجمة اسمها سهيلة… بس إنتي أنور منها بكتير.";
+var sayings = ["كل ليلة بدوّر عليكي في كل نجمة.", "لو ليا أمنية، هتبقى إنتي.", "نورك مالي حياتي.", "جنبك الدنيا أهدى وأحلى.", "حتى النجوم بتغير من ضحكتك.", "إنتي أحلى حاجة حصلتلي."];
+var starSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.7-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>';
+var starPos = [[18,24,"s"],[36,70,"s"],[50,42,"big"],[70,72,"s"],[82,24,"s"],[12,78,"s"],[90,58,"s"]];
+var skyHtml = "";
+for(var i = 0; i < 28; i++){
+  skyHtml += '<i style="left:' + (Math.random()*100) + '%;top:' + (Math.random()*100) + '%;animation-delay:' + (Math.random()*3) + 's"></i>';
+}
+starPos.forEach(function(s, idx){
+  skyHtml += '<button class="star ' + s[2] + '" type="button" aria-label="نجمة" style="left:' + s[0] + '%;top:' + s[1] + '%;animation-delay:' + (idx*0.4) + 's">' + starSvg + '</button>';
+});
+$("sky").innerHTML = skyHtml;
+var sayIdx = 0;
+$("sky").addEventListener("click", function(e){
+  var b = e.target.closest(".star"); if(!b) return;
+  b.classList.add("on");
+  if(b.classList.contains("big")){ $("skyMsg").textContent = STAR_MSG; petals(30, true); }
+  else { $("skyMsg").textContent = sayings[sayIdx++ % sayings.length]; }
+});
+var BAL_WORDS = ["بحبك", "يا", "سهيلة", "لآخر", "العمر"];
+var balColors = ["#f08aa0", "#e0507a", "#f6b9c6", "#d9566f", "#f4a0b5"];
+var balPos = [[12,12],[30,38],[50,8],[69,36],[87,12]];
+var balHtml = "";
+balPos.forEach(function(p, n){
+  var c = balColors[n];
+  balHtml += '<button class="bal" type="button" aria-label="بالونة" style="left:' + p[0] + '%;top:' + p[1] + '%;animation-delay:' + (n*0.5) + 's">' +
+    '<svg viewBox="0 0 60 90" aria-hidden="true"><ellipse cx="30" cy="32" rx="26" ry="30" fill="' + c + '"/>' +
+    '<ellipse cx="21" cy="20" rx="6" ry="9" fill="#fff" opacity=".35"/>' +
+    '<path d="M26 61l4 6 4-6z" fill="' + c + '"/>' +
+    '<path d="M30 67c-6 8 6 12 0 22" fill="none" stroke="#c9a0ac" stroke-width="1.5"/></svg></button>';
+});
+$("balloons").innerHTML = balHtml;
+var balIdx = 0;
+$("balloons").addEventListener("click", function(e){
+  var b = e.target.closest(".bal"); if(!b || b.classList.contains("pop")) return;
+  b.classList.add("pop");
+  setTimeout(function(){ b.style.visibility = "hidden"; }, 260);
+  balIdx++;
+  $("balMsg").textContent = BAL_WORDS.slice(0, balIdx).join(" ");
+  if(balIdx === BAL_WORDS.length) petals(50, true);
+});
+
+var fw = document.createElement("canvas");
+fw.setAttribute("aria-hidden", "true");
+fw.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:20";
+document.body.appendChild(fw);
+var fx = fw.getContext("2d"), parts = [], fwRun = false;
+function fwSize(){ var r = window.devicePixelRatio || 1; fw.width = innerWidth*r; fw.height = innerHeight*r; fx.setTransform(r, 0, 0, r, 0, 0); }
+fwSize(); window.addEventListener("resize", fwSize);
+var fwColors = ["#ff8fab", "#ffb3c6", "#ffd166", "#ffffff", "#e0507a", "#ffe9a8"];
+function burst(x, y){
+  var col = fwColors[Math.floor(Math.random()*fwColors.length)];
+  for(var i = 0; i < 46; i++){
+    var a = Math.random()*Math.PI*2, sp = 1.5 + Math.random()*4.2;
+    parts.push({x:x, y:y, vx:Math.cos(a)*sp, vy:Math.sin(a)*sp, l:1, c:Math.random() < 0.7 ? col : fwColors[Math.floor(Math.random()*fwColors.length)]});
+  }
+  if(!fwRun){ fwRun = true; requestAnimationFrame(fwTick); }
+}
+function fwTick(){
+  fx.clearRect(0, 0, innerWidth, innerHeight);
+  parts = parts.filter(function(p){ return p.l > 0; });
+  parts.forEach(function(p){
+    p.x += p.vx; p.y += p.vy; p.vy += 0.06; p.vx *= 0.985; p.l -= 0.014;
+    fx.globalAlpha = Math.max(p.l, 0); fx.fillStyle = p.c;
+    fx.beginPath(); fx.arc(p.x, p.y, 2.2, 0, 6.283); fx.fill();
+  });
+  fx.globalAlpha = 1;
+  if(parts.length) requestAnimationFrame(fwTick); else fwRun = false;
+}
+function fireworks(){
+  if(reduce) return;
+  for(var k = 0; k < 7; k++){
+    setTimeout(function(){ burst(innerWidth*(0.15 + Math.random()*0.7), innerHeight*(0.12 + Math.random()*0.4)); }, k*450);
+  }
+}
+if("IntersectionObserver" in window){
+  var ioEnd = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ fireworks(); ioEnd.disconnect(); } }); }, {threshold:0.5});
+  ioEnd.observe(document.querySelector(".end"));
+}
+
+var scratchInit = false;
+function initScratch(){
+  if(scratchInit) return;
+  scratchInit = true;
+  var c = $("scratch"), box = c.parentNode, w = box.clientWidth, h = box.clientHeight, r = window.devicePixelRatio || 1;
+  c.width = w*r; c.height = h*r;
+  var x = c.getContext("2d"); x.scale(r, r);
+  var g = x.createLinearGradient(0, 0, w, h);
+  g.addColorStop(0, "#f6b9c6"); g.addColorStop(0.5, "#e0507a"); g.addColorStop(1, "#f08aa0");
+  x.fillStyle = g; x.fillRect(0, 0, w, h);
+  x.fillStyle = "#fff"; x.font = "700 22px Tajawal, sans-serif";
+  x.textAlign = "center"; x.textBaseline = "middle"; x.direction = "rtl";
+  x.fillText("خربشي هنا يا سوسو", w/2, h/2);
+  var down = false, done = false, n = 0;
+  function pos(e){ var b = c.getBoundingClientRect(); return [e.clientX - b.left, e.clientY - b.top]; }
+  function check(){
+    if(done) return;
+    var d = x.getImageData(0, 0, c.width, c.height).data, cleared = 0, total = 0;
+    for(var i = 3; i < d.length; i += 160){ total++; if(d[i] === 0) cleared++; }
+    if(cleared/total > 0.45){ done = true; c.style.opacity = 0; c.style.pointerEvents = "none"; petals(40, true); }
+  }
+  function scratch(e){
+    var p = pos(e);
+    x.globalCompositeOperation = "destination-out";
+    x.beginPath(); x.arc(p[0], p[1], 24, 0, Math.PI*2); x.fill();
+    if(++n % 8 === 0) check();
+  }
+  c.addEventListener("pointerdown", function(e){ down = true; c.setPointerCapture(e.pointerId); scratch(e); });
+  c.addEventListener("pointermove", function(e){ if(down) scratch(e); });
+  c.addEventListener("pointerup", function(){ down = false; check(); });
+  c.addEventListener("pointercancel", function(){ down = false; });
+}
+
+var NAME_LETTERS = [["س", "سندي وأمان قلبي"], ["ه", "هدوء روحي"], ["ي", "يومي الحلو"], ["ل", "ليّا الدنيا كلها"], ["ة", "هدية من ربنا ليا"]];
+$("letters").innerHTML = NAME_LETTERS.map(function(l, n){
+  return '<button class="lt" type="button" data-n="' + n + '" aria-label="حرف ' + l[0] + '">' + l[0] + '</button>';
+}).join("");
+var lettersOn = {};
+$("letters").addEventListener("click", function(e){
+  var b = e.target.closest(".lt"); if(!b) return;
+  var n = +b.getAttribute("data-n");
+  b.classList.add("on"); lettersOn[n] = true;
+  $("lMsg").textContent = NAME_LETTERS[n][1];
+  if(Object.keys(lettersOn).length === NAME_LETTERS.length){
+    setTimeout(function(){ $("lMsg").textContent = "سهيلة… اسم مفيش زيه، وقلب مفيش أحلى منه"; petals(40, true); }, 1600);
+  }
+});
+
+if("IntersectionObserver" in window && !reduce){
+  var ioRv = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); ioRv.unobserve(en.target); } }); }, {threshold:0.12, rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll("#main > *").forEach(function(el){ el.classList.add("rv"); ioRv.observe(el); });
+}
+
+var colors = ["#e8879c","#f4b6c2","#d9566f","#f9c6d2","#c04a78"];
+function petals(n, fast){
+  if(reduce) return;
+  for(var i=0;i<n;i++){
+    var p = document.createElement("div");
+    p.className = "petal";
+    p.style.left = Math.random()*100 + "vw";
+    p.style.background = colors[Math.floor(Math.random()*colors.length)];
+    p.style.setProperty("--sway", (Math.random()*80-40) + "px");
+    var d = fast ? 3 + Math.random()*3 : 9 + Math.random()*8;
+    p.style.animationDuration = d + "s";
+    p.style.animationDelay = (Math.random()*(fast?1.2:6)) + "s";
+    p.style.transform = "scale(" + (0.7+Math.random()*0.9) + ")";
+    document.body.appendChild(p);
+    setTimeout(function(el){ el.remove(); }, (d+8)*1000, p);
+  }
+}
+petals(12, false);
+setInterval(function(){ if(!document.hidden) petals(3,false); }, 5000);
+
+function num(v){ return parseInt(String(v).replace(/[٠-٩]/g, function(d){ return "٠١٢٣٤٥٦٧٨٩".indexOf(d); }), 10); }
+["dd","mm","yy"].forEach(function(id){ $(id).addEventListener("keydown", function(e){ if(e.key === "Enter") $("openBtn").click(); }); });
+$("openBtn").addEventListener("click", function(){
+  if(num($("dd").value) !== CONFIG.birthday.day || num($("mm").value) !== CONFIG.birthday.month || num($("yy").value) !== CONFIG.birthday.year){
+    $("err").textContent = "مش التاريخ ده يا قمر، جرّبي تاني";
+    var dt = document.querySelector(".date"); dt.classList.remove("shake"); void dt.offsetWidth; dt.classList.add("shake");
+    return;
+  }
+  $("err").textContent = "";
+  $("pre").style.display = "none";
+  var c = $("count"), n = 3;
+  function tick(){
+    if(n === 0){
+      c.textContent = "";
+      petals(70, true);
+      $("main").hidden = false;
+      initScratch();
+      $("intro").classList.add("gone");
+      setTimeout(function(){ $("intro").style.display = "none"; window.scrollTo(0,0); }, 900);
+      return;
+    }
+    c.textContent = n;
+    c.classList.remove("pop"); void c.offsetWidth; c.classList.add("pop");
+    n--; setTimeout(tick, 1000);
+  }
+  tick();
+});
+$("moreBtn").addEventListener("click", function(){ fireworks(); petals(25, true); });
+</script>
+</body>
+</html>
